@@ -1,0 +1,73 @@
+.projects-section {
+  padding: 80px 20px;
+  background-color: #0f172a; /* Cùng màu nền với body để tạo sự liền mạch */
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background-color: #1e293b;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: left;
+  border: 1px solid #334155;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #61dafb;
+}
+
+.project-title {
+  color: #f8fafc;
+  font-size: 1.5rem;
+  margin: 0 0 15px 0;
+}
+
+.project-desc {
+  color: #94a3b8;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1; /* Đẩy phần tag và link xuống đáy */
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.tech-tag {
+  background-color: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.project-link {
+  color: #61dafb;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: gap 0.3s ease;
+}
+
+.project-link:hover {
+  gap: 10px; /* Hiệu ứng mũi tên bay ra xa một chút khi di chuột */
+}

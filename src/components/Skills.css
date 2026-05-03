@@ -1,0 +1,59 @@
+.skills-section {
+  padding: 80px 20px;
+  background-color: #0b1120; /* Màu nền hơi khác phần Hero một chút để tạo sự phân cách */
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #f8fafc;
+  margin-bottom: 50px;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #38bdf8;
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Tự động chia cột và xuống dòng trên điện thoại */
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background-color: #1e293b;
+  padding: 30px 20px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  border-color: #38bdf8;
+  box-shadow: 0 10px 20px rgba(56, 189, 248, 0.1);
+}
+
+.skill-card h3 {
+  color: #38bdf8;
+  font-size: 1.4rem;
+  margin: 0 0 10px 0;
+}
+
+.skill-card p {
+  color: #94a3b8;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}

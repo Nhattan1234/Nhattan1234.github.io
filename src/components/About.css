@@ -1,0 +1,156 @@
+.about-section {
+  padding: 80px 20px;
+  background-color: #0b1120;
+  display: flex;
+  justify-content: center;
+}
+
+.about-wrapper {
+  max-width: 1100px;
+  width: 100%;
+}
+
+.about-title {
+  text-align: center; 
+  position: relative;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #f8fafc;
+  margin-bottom: 40px;
+}
+.about-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #6366f1; 
+  margin-top: 10px;
+}
+
+.about-container {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-content p {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.stats-grid {
+  display: flex;
+  margin-top: 20px;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.stat-box {
+  flex: 1;
+  background-color: #1e293b;
+  padding: 20px 15px;
+  text-align: center;
+  border-right: 1px solid #334155;
+}
+
+.stat-box:last-child {
+  border-right: none;
+}
+
+.stat-box h3 {
+  font-size: 2.2rem;
+  color: #818cf8;
+  margin: 0 0 5px 0;
+}
+
+.stat-box p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Phần Terminal */
+.about-terminal {
+  flex: 1;
+  background-color: #0f172a;
+  border-radius: 12px;
+  border: 1px solid #1e293b;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  font-family: 'Consolas', 'Courier New', monospace;
+  overflow: hidden;
+}
+
+.terminal-header {
+  background-color: #1e293b;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.mac-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.mac-buttons span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+}
+
+.close-btn { background-color: #ff5f56; }
+.min-btn { background-color: #ffbd2e; }
+.max-btn { background-color: #27c93f; }
+
+.terminal-title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  color: #64748b;
+  font-size: 0.9rem;
+  pointer-events: none;
+}
+
+.terminal-body {
+  padding: 25px;
+  color: #f8fafc;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.command {
+  margin-bottom: 20px;
+}
+
+.dollar {
+  color: #6366f1;
+  margin-right: 10px;
+}
+
+.code-block { margin: 0; }
+.code-line { margin: 5px 0; }
+
+/* Màu sắc JSON */
+.json-key { color: #fb923c; } 
+.json-string { color: #4ade80; } 
+.json-bool { color: #f87171; } 
+.json-number { color: #fb923c; } 
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+}
