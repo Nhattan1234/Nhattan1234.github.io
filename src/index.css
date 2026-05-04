@@ -109,3 +109,119 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+
+.app-wrapper {
+  overflow-x: hidden; /* NGĂN CHẶN NỘI DUNG TRÀN RA BÊN PHẢI */
+  width: 100%;
+}
+
+.contact-section {
+  padding: 80px 20px 40px;
+  background-color: #0b1120;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-wrapper {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Trên máy tính chia 2 cột rõ ràng */
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  text-decoration: none;
+  text-align: left;
+  transition: border-color 0.3s;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+/* --- RESPONSIVE CSS CHO ĐIỆN THOẠI (Dưới 640px) --- */
+@media (max-width: 640px) {
+  /* 1. Đảm bảo toàn bộ section và wrapper không bị tràn */
+  .contact-section,
+  .about-section,
+  .hero-section {
+    padding: 60px 15px 30px; /* Giảm padding trên điện thoại */
+    overflow-x: hidden;
+  }
+
+  .contact-wrapper,
+  .about-wrapper,
+  .hero-wrapper {
+    width: 100%;
+    max-width: 100%; /* Đảm bảo không vượt quá chiều rộng màn hình */
+    padding: 0;
+  }
+
+  /* 2. Căn giữa các tiêu đề và đoạn văn trên điện thoại */
+  .contact-title,
+  .about-title,
+  .hero-section h1,
+  .about-content p,
+  .contact-desc {
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* 3. Đưa cái gạch chân màu xanh vào giữa tiêu đề trên điện thoại */
+  .contact-title::after,
+  .about-title::after {
+    margin: 10px auto 0; /* 'auto' để căn giữa */
+  }
+
+  /* 4. CHUYỂN CONTACT-GRID THÀNH 1 CỘT TRÊN ĐIỆN THOẠI */
+  .contact-grid {
+    grid-template-columns: 1fr; /* CHUYỂN THÀNH MỘT CỘT DUY NHẤT */
+    gap: 15px;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .contact-card {
+    text-align: center;
+    justify-content: center; /* Căn giữa nội dung trong card */
+  }
+
+  .contact-info {
+    align-items: center; /* Căn giữa text trong contact-info */
+  }
+
+  /* 5. CHUYỂN FORM-ROW THÀNH 1 CỘT TRÊN ĐIỆN THOẠI */
+  .form-row {
+    flex-direction: column; /* Chuyển sang xếp hàng dọc */
+    gap: 15px;
+  }
+
+  .contact-form-container {
+    padding: 0 10px; /* Thêm padding nhẹ ở 2 bên form */
+  }
+
+  /* 6. Footer xếp hàng dọc trên điện thoại */
+  .footer-content {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
