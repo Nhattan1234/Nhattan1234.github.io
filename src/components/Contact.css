@@ -1,10 +1,15 @@
 .contact-section {
-  padding: 80px 20px 40px; /* Thêm chút padding dưới */
+  padding: 80px 20px 40px;
   background-color: #0b1120;
   display: flex;
-  flex-direction: column; /* Ép mọi thứ xếp hàng dọc từ trên xuống */
-  align-items: center;    /* Căn giữa tất cả */
-  width: 100%;
+  flex-direction: column;
+  align-items: center;
+
+  /* 4 DÒNG NÀY GIÚP PHÁ KHUNG 1126px, TRÀN FULL MÀN HÌNH */
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .contact-wrapper {
