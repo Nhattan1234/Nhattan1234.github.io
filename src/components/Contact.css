@@ -5,11 +5,11 @@
   flex-direction: column;
   align-items: center;
 
-  /* 4 DÒNG NÀY GIÚP PHÁ KHUNG 1126px, TRÀN FULL MÀN HÌNH */
+  /* TUYỆT CHIÊU PHÁ KHUNG CHUẨN NHẤT */
   width: 100vw;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  box-sizing: border-box;
 }
 
 .contact-wrapper {
