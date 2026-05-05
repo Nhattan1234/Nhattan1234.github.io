@@ -185,44 +185,72 @@ code {
    GIAO DIỆN ĐIỆN THOẠI (BẮT BUỘC ĐỂ DƯỚI CÙNG)
    ========================================= */
 @media (max-width: 780px) {
+  /* 1. SỬA PHẦN HERO (MẶT TIỀN) */
   .hero-container {
     flex-direction: column !important; 
     gap: 30px !important;
-    max-width: 95% !important;
-    padding: 30px 0 !important;
-  }
-
-  .hero-content {
     max-width: 100% !important;
-    width: 100% !important;
+    padding: 20px 15px !important;
   }
   
   .hero-content,
   .hero-content .title,
   .hero-content .subtitle,
   .hero-content .description,
-  .hero-content .greeting {
-    text-align: center !important;
+  .hero-content .greeting,
+  .button-group {
+    text-align: center !important; /* Đt thì đưa ra giữa cho cân đối */
+    margin-left: 0 !important;
   }
   
   .button-group {
-    display: flex !important;
     justify-content: center !important;
-    align-items: center !important;
-    gap: 12px !important;
-    width: 100% !important;
-    margin-top: 10px !important;
-    flex-wrap: wrap !important;
+    flex-wrap: wrap !important; /* Đủ chỗ thì nằm ngang, thiếu chỗ thì rớt dòng nút */
   }
 
-  /* Trả lại size chữ vừa vặn cho điện thoại */
-  .hero-content .title { font-size: clamp(28px, 8vw, 40px) !important; }
-  .hero-content .subtitle { font-size: clamp(16px, 4.5vw, 22px) !important; }
-  .hero-content .description { font-size: clamp(14px, 3.5vw, 16px) !important; }
+  /* Ép size chữ nhỏ lại vừa màn đt */
+  .hero-content .title, h1 { 
+    font-size: 38px !important; 
+    line-height: 1.2 !important;
+  }
+  .hero-content .subtitle, h2 { 
+    font-size: 22px !important; 
+  }
+  .hero-content .description { 
+    font-size: 16px !important; 
+  }
+  .hero-content .greeting {
+    font-size: 14px !important;
+    letter-spacing: 3px !important; /* Thu hẹp khoảng cách chữ CLEAR CODE */
+  }
   
-  /* Thu nhỏ hình tròn trên điện thoại */
   .image-placeholder {
-    width: 200px !important;
-    height: 200px !important;
+    width: 260px !important;
+    height: 260px !important;
+    margin: 0 auto !important;
+  }
+
+  /* 2. SỬA PHẦN LIÊN HỆ (CONTACT) */
+  /* Ép Họ Tên và Email xuống hàng dọc */
+  .form-row {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+  
+  .form-row > * {
+    width: 100% !important; /* Cho 2 ô bung full chiều ngang */
+  }
+
+  /* Ép 2 cái thẻ (Email, Instagram) xuống hàng dọc */
+  .contact-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important; /* Chỉ 1 cột duy nhất */
+    gap: 15px !important;
+  }
+  
+  /* Cho phép chữ email dài tự động ngắt dòng đẹp mắt, không bị vỡ chữ */
+  .contact-card {
+    word-break: break-word !important; 
   }
 }
