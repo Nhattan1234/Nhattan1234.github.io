@@ -1,0 +1,74 @@
+/* =========================================
+   THANH MENU (NAVBAR) - HIỆU ỨNG KÍNH MỜ
+   ========================================= */
+.navbar {
+  position: fixed; /* Đóng đinh nó lên nóc màn hình */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Đẩy Logo sang trái, Menu sang phải */
+  align-items: center;
+  padding: 20px 5%; /* Lề 2 bên cho thoáng */
+  
+  /* Hiệu ứng kính mờ xịn sò */
+  background: rgba(15, 23, 42, 0.8); /* Nền tối hơi trong suốt */
+  backdrop-filter: blur(12px); 
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  
+  z-index: 1000; /* Bùa hộ mệnh: Đảm bảo luôn nổi lên trên cùng, ko bị hình hay chữ khác đè lên */
+  box-sizing: border-box;
+}
+
+/* CHỈNH LOGO */
+.nav-logo a {
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: system-ui, sans-serif;
+  letter-spacing: -1px;
+}
+
+.nav-logo span {
+  color: #38bdf8; /* Màu xanh lơ cho dấu chấm tạo điểm nhấn */
+}
+
+/* CHỈNH CỤM NÚT BẤM */
+.nav-links {
+  display: flex;
+  list-style: none; /* Xóa mấy cái dấu chấm đen tào lao của thẻ <ul> */
+  gap: 40px; /* Khoảng cách giữa các nút */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #a0aec0; /* Màu chữ xám nhạt */
+  text-decoration: none; /* Xóa gạch chân */
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease; /* Hiệu ứng chuyển màu mượt mà */
+}
+
+/* Hiệu ứng khi rê chuột vào nút */
+.nav-links a:hover {
+  color: #38bdf8; /* Đổi sang màu xanh lơ */
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.5); /* Phát sáng nhẹ */
+}
+
+/* =========================================
+   GIAO DIỆN ĐIỆN THOẠI 
+   ========================================= */
+@media (max-width: 780px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+  
+  /* Trên điện thoại hẹp quá, mình TẠM ẨN mấy cái nút đi cho đỡ vỡ web. 
+     Bữa nào rảnh tui chỉ ní làm cái nút "Hamburger 3 gạch" bấm xổ xuống sau nha! */
+  .nav-links {
+    display: none !important;
+  }
+}

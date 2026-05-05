@@ -122,6 +122,7 @@
 // export default App
 
 import React from 'react';
+import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About'; // Gọi About vào
 import Skills from './components/Skills';
@@ -131,6 +132,7 @@ import Contact from './components/Contact';
 function App() {
   return (
     <div>
+      <Navbar />
       <Hero />
       <About /> {/* Bố trí ngay sau Hero */}
       <Skills />

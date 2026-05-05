@@ -30,7 +30,7 @@ function Projects() {
   ];
 
   return (
-    <section className="projects-section" id="project">
+    <section className="projects-section" id="projects">
       <h2 className="section-title">Dự Án Nổi Bật</h2>
       <div className="projects-grid">
         {projectsList.map((project, index) => (

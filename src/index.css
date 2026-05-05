@@ -127,7 +127,8 @@ code {
   max-width: 90% !important; /* Dùng 90% màn hình thay vì 1126px, chừa 5% lề mỗi bên cho thoáng */
   margin: 0 auto !important; 
   width: 100%;
-  padding: 50px 0;
+  padding-top: 120px !important; 
+  padding-bottom: 50px !important;
   box-sizing: border-box;
 }
 
