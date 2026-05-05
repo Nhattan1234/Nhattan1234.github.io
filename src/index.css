@@ -158,18 +158,18 @@ code {
 }
 
 .hero-content .title {
-  font-size: 76px !important; /* Phóng chữ Xin chào to chà bá */
+  font-size: clamp(28px, 6vw, 76px) !important;
   line-height: 1.1 !important;
   margin-bottom: 15px !important;
 }
 
 .hero-content .subtitle {
-  font-size: 32px !important; /* Chuyên gia... to hơn */
+  font-size: clamp(16px, 3vw, 32px) !important;
   margin-bottom: 20px !important;
 }
 
 .hero-content .description {
-  font-size: 20px !important; /* Chữ mô tả dễ đọc hơn */
+  font-size: clamp(14px, 2vw, 20px) !important;
   line-height: 1.6 !important;
   margin-bottom: 40px !important;
 }
