@@ -185,7 +185,7 @@ code {
 /* =========================================
    GIAO DIỆN ĐIỆN THOẠI (BẮT BUỘC ĐỂ DƯỚI CÙNG)
    ========================================= */
-@media (max-width: 580px) {
+@media (max-width: 780px) {
   /* 1. SỬA PHẦN HERO (MẶT TIỀN) */
   .hero-container {
     flex-direction: column !important; 
