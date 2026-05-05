@@ -189,3 +189,52 @@
     text-align: center;
   }
 }
+
+@media (max-width: 780px) {
+  /* 1. ÉP FORM XẾP DỌC BẰNG NGUYÊN LÝ KHỐI (BLOCK) */
+  .form-row {
+    display: block !important; /* Tước quyền Flexbox, ép xuống dòng tự nhiên */
+    width: 100% !important;
+  }
+
+  .form-row .input-field {
+    width: 100% !important;
+    margin-bottom: 15px !important; /* Tạo khoảng cách giữa ô Họ tên và ô Email */
+    display: block !important;
+  }
+
+  /* Ép 2 cái ô nhập chữ không được phình to qua mép màn hình */
+  .input-field input, 
+  .input-field textarea {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 2. ÉP THẺ CONTACT XẾP DỌC VÀ CHẶT CHỮ */
+  .contact-grid {
+    display: block !important; /* Tước quyền Grid, ép rớt xuống từng hàng */
+    width: 100% !important;
+  }
+
+  .contact-card {
+    display: flex !important; /* Giữ icon và chữ nằm ngang với nhau */
+    width: 100% !important;
+    margin-bottom: 15px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important; /* Tràn ra ngoài là cắt bỏ ngay */
+  }
+
+  .contact-info {
+    flex: 1 !important; /* Nhường hết chỗ trống cho chữ */
+    min-width: 0 !important; /* Thuốc chống phình to của WebKit iOS */
+  }
+
+  .contact-value {
+    display: block !important;
+    width: 100% !important;
+    word-break: break-all !important; /* Ép chặt chữ tàn bạo trên Safari */
+    overflow-wrap: break-word !important;
+    white-space: pre-wrap !important;
+  }
+}

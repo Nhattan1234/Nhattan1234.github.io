@@ -5,7 +5,7 @@ function Contact() {
   return (
     <section className="contact-section" id="contact">
       <div className="contact-wrapper">
-        <h2 className="section-title contact-title">Liên hệ Ngay (test)</h2>
+        <h2 className="section-title contact-title">Liên hệ</h2>
         <p className="contact-desc">
           Bạn có ý tưởng muốn thực hiện, hãy giao cho tôi, tôi sẽ biến nó thành sự thật.
         </p>
@@ -18,7 +18,7 @@ function Contact() {
             <div className="form-row">
               <div className="input-field">
                 <label>Họ tên</label>
-                <input type="text" name="name" placeholder="Nguyễn Văn A" required />
+                <input type="text" name="name" placeholder="nhập họ và tên của bạn" required />
               </div>
               <div className="input-field">
                 <label>Email</label>
