@@ -25,6 +25,23 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* =========================================
+   THUỐC ĐẶC TRỊ TRÀN VIỀN (KHÓA CHẾT CUỘN NGANG)
+   ========================================= */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+  overflow-x: hidden !important; /* Lệnh cấm tuyệt đối kéo ngang màn hình */
+  background-color: #0f172a; /* Ép luôn nền tối phòng hờ lỡ có bị giật màn hình cũng ko ra màu trắng */
+}
+
+/* Ép tất cả các thẻ trên web phải tính toán kích thước chuẩn, không được phình to bậy bạ */
+*, *::before, *::after {
+  box-sizing: border-box !important;
+}
+
 /* Đưa Media Query ra ngoài Root cho Vite nó không bị ngáo */
 @media (max-width: 1024px) {
   :root {
