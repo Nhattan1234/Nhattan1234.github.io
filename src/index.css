@@ -230,27 +230,38 @@ code {
     margin: 0 auto !important;
   }
 
-  /* 2. SỬA PHẦN LIÊN HỆ (CONTACT) */
-  /* Ép Họ Tên và Email xuống hàng dọc */
+  /* =========================================
+     2. SỬA PHẦN LIÊN HỆ (CONTACT) - FIX CỨNG CHO IOS
+     ========================================= */
   .form-row {
     display: flex !important;
     flex-direction: column !important;
     gap: 15px !important;
+    width: 100% !important;
   }
   
   .form-row > * {
-    width: 100% !important; /* Cho 2 ô bung full chiều ngang */
+    width: 100% !important;
+    min-width: 0 !important; /* LỆNH CHỐNG PHÌNH TO KHUNG NHẬP TRÊN IOS */
+    box-sizing: border-box !important;
   }
 
-  /* Ép 2 cái thẻ (Email, Instagram) xuống hàng dọc */
+  /* Đổi từ Grid sang Flex dọc cho an toàn tuyệt đối với mọi đời iPhone */
   .contact-grid {
-    display: grid !important;
-    grid-template-columns: 1fr !important; /* Chỉ 1 cột duy nhất */
+    display: flex !important;
+    flex-direction: column !important;
     gap: 15px !important;
+    width: 100% !important;
   }
   
-  /* Cho phép chữ email dài tự động ngắt dòng đẹp mắt, không bị vỡ chữ */
   .contact-card {
-    word-break: break-word !important; 
+    width: 100% !important;
+    min-width: 0 !important; /* Tước quyền phình to của thẻ */
+    box-sizing: border-box !important;
+    
+    /* Bùa chặt chữ chuyên trị iPhone */
+    word-break: break-all !important; 
+    overflow-wrap: anywhere !important; 
+    -webkit-hyphens: auto !important;
   }
 }
