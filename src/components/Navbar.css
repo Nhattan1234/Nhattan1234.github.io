@@ -82,6 +82,15 @@
 /* =========================================
    GIAO DIỆN ĐIỆN THOẠI 
    ========================================= */
+/* Nút 3 gạch mặc định giấu đi trên máy tính */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* =========================================
+   GIAO DIỆN ĐIỆN THOẠI 
+   ========================================= */
 @media (max-width: 780px) {
   .navbar {
     padding: 15px 20px;
